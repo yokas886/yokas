@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://www.w3school.com.cn/lib/bs/bootstrap.css" rel="stylesheet" />
+        <script src="https://www.w3school.com.cn/lib/bs/bootstrap.js"></script>
+        <script>
+            function search() {
+                var uin = document.getElementById('uin').value.trim();  
+                var a = document.getElementsByTagName('li');
+                var reg = /.*-.*-.*/;
+                    for (var i = 0; i < a.length; i++) {
+                        if (reg.test(a[i].innerHTML)) {
+                            if (!a[i].innerHTML.includes(uin)) {
+                                a[i].style.display = 'none';
+                            }
+                        }
+                    }
+            }
+            window.onload = function() {
+                var d = new Date();
+                var time = document.getElementById('time');
+                time.innerHTML = (Math.ceil((d.getTime() - 1707926400000)/86400000));
+                var a = document.getElementsByTagName('li');
+                var reg = /.*-.*-.*/;
+                var num = 0;
+                for (var i = 0; i < a.length; i++) {
+                    if (reg.test(a[i].innerHTML)) {
+                        num++;
+                    }
+                }
+                var data = document.getElementById('data');
+                data.innerHTML = num;
+            }
+        </script>
+        <title>关卡里程数排行榜</title>
+    </head>
+    <body>
+    <div class="container">
+        <h1 class="text-center">关卡里程数排行榜</h1>
+        <hr />
+        <div class="text-secondary"><a href="../index.html">首页</a>&nbsp;&gt;&nbsp;关卡里程数排行榜</div>
+        <hr />
+        <div class="text-secondary">
+            <div><strong>小tips：</strong></div>
+            <ul>
+                <li>榜单顶部灰色数据是2023世界纪录，不参与排名，可供参考</li>
+                <li>如发现页面数据有误有疑问或有改进意见欢迎告知</li>
+                <li>榜单仅供参考，证明我们有过，祝你每天开心！</li>
+                <li>个人记录讨论群Q群+895097776</li>
+                <li>【每日登星】栏目随榜单数据更新，所谓“冠数”即关卡第一次数</li>
+                <li>站点居然运行了 <span id="time"></span> 天！</li>
+                <li>存放着我们的 <span id="data"></span> 条数据！！</li>
+            </ul>
+        </div>
+        <hr />
+        <div class="small"><strong>快速跳转：</strong></div>
+        <div class="small text-secondary">（tip：跳转后点按设备返回键可回到此处）</div>
+        <a href="#tianyuan">田园</a>
+        <a href="#jijie">季节</a>
+        <a href="#shamo">沙漠</a>
+        <a href="#beiji">北极</a>
+        <a href="#gaosugonglu">高速公路</a>
+        <a href="#shandong">山洞</a>
+        <a href="#yueqiu">月球</a>
+        <a href="#xunlianying">训练营</a>
+        <a href="#huoxing">火星</a>
+        <a href="#shengdan">圣诞</a>
+        <a href="#waitaikongxingqiu">外太空星球</a>
+        <a href="#beijidongxue">北极洞穴</a>
+        <a href="#senlin">森林</a>
+        <a href="#shan">山</a>
+        <a href="#xianjingchuanshuo">仙境传说</a>
+        <a href="#nitan">泥潭</a>
+        <a href="#huoshan">火山</a>
+        <a href="#shatan">沙滩</a>
+        <a href="#gongchang">工厂</a>
+        <a href="#guoshanche">过山车</a>
+        <a href="#yewan">夜晚</a>
+        <a href="#wuding">屋顶</a>
+        <a href="#feichechang">废车场</a>
+        <a href="#jianzhu">建筑</a>
+        <a href="#caihong">彩虹</a>
+        <a href="#guishenchumo">鬼神出没</a>
+        <a href="#beiji2">新北极</a>
+        <a href="#hedianzhan">核电站</a>
+        <a href="#jingjichang">竞技场</a>
+        <a href="#conglin">丛林</a>
+        <a href="#nihong">霓虹</a>
+        <a href="#yuzhi">预知</a>
+        <a href="#zhaozedi">沼泽地</a>
+        <a href="#jiaoqu">郊区</a>
+        <a href="#xingdongyingxiong">行动英雄</a>
+        <a href="#chaojixiangcun">超级乡村</a>
+        <a href="#huaijiurenwu">怀旧任务</a>
+        <a href="#dagaosu">大高速公路</a>
+        <a href="#dashamo">大沙漠</a>
+        <a href="#taikongrenwu">太空任务</a>
+        <a href="#leizhu"><strong>【擂主空间】</strong></a>
+        <hr />
+        <div class="text-center"><strong>【昨日登星】</strong><span class="text-secondary">(随数据实时更新)</span></div>
+        <img class="img-fluid" src="https://fingersoft.com/app/uploads/2024/01/fs-game-hcr-banner-test2.webp" alt="FS官图" />
+        <ol>
+            <li><strong>HCR冰糖鱼——12冠</strong></li>
+            <li>*夏夜冰晶梦——11冠</li>
+            <li>风和日夏——7冠</li>
+            <li>汉风派掌门——5冠（2016）</li>
+            <li>B站lai1345——2冠</li>
+            <li>congee6388——1冠</li>
+            <li>叁起——1冠</li>
+            <li>*混世魔王——1冠</li>
+            <li>死鱼——1冠</li>
+        </ol>
+        <hr />
+        <input type="text" placeholder=" 输入你想查询的关键字" id="uin" /> <button onclick="search()">搜索</button>
+        <hr />
+        <h3><strong>按关卡分类：</strong></h3>
+        <p id="tianyuan"><strong>田园：</strong></p>
+        <ul class="text-secondary">
+            <li>233361m-怪物卡车-2023</li>
+        </ul>
+        <ol>
+            <li>24994m-超级越野坦克-叁起</li>
+            <li>12608m-怪物卡车-风和日夏</li>
+            <li>11069m-超级越野坦克-贴吧汉风派掌门</li>
+            <li>10847m-沙丘越野车-风和日夏</li>
+            <li>9060m-沙丘越野车-congee6388</li>
+            <li>2558m-高速赛车-Electree</li>
+            <li>2156m-吉普-YOKA</li>
+        </ol>
+        <p id="jijie"><strong>季节：</strong></p>
+        <ul class="text-secondary">
+            <li>43906m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>25167m-大手指-B站lai1345</li>
+            <li>21384m-超级越野坦克-congee6388</li>
+            <li>18334m-大手指-congee6388</li>
+            <li>11824m-怪物卡车-混世魔王</li>
+            <li>7747m-空气汽车-congee6388</li>
+            <li>5432m-怪物卡车-沧海如尘</li>
+            <li>4551m-吉普-YOKA</li>
+            <li>1290m-汽车汽车-congee6388</li>
+        </ol>
+        <p id="shamo"><strong>沙漠：</strong></p>
+        <ul class="text-secondary">
+            <li>328502m-沙丘越野车-2023</li>
+        </ul>
+        <ol>
+            <li>159956m-沙丘越野车-HCR冰糖鱼</li>
+            <li>67663m-超级越野坦克-风和日夏</li>
+            <li>51567m-沙丘越野车-B站lai1345</li>
+            <li>44767m-超级越野坦克-叁起</li>
+            <li>43544m-超级越野坦克-南方下雪我就释怀</li>
+            <li>36327m-沙漠卡车-风和日夏</li>
+            <li>13474m-超级越野坦克-汉风派掌门</li>
+            <li>6259m-沙丘越野车-congee6388</li>
+            <li>3025m-越野摩托车-叁起</li>
+            <li>1804m-吉普-YOKA</li>
+        </ol>
+        <p id="beiji"><strong>北极：</strong></p>
+        <ul class="text-secondary">
+            <li>10721m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>6019m-超级越野坦克-汉风派掌门</li>
+            <li>4718m-车库-congee6388</li>
+            <li>4225m-雪地摩托-congee6388</li>
+            <li>3948m-超级越野坦克-流枫</li>
+            <li>1664m-吉普-YOKA</li>
+        </ol>
+        <p id="gaosugonglu"><strong>高速公路：</strong></p>
+        <ul class="text-secondary">
+            <li>69840m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>46655m-车库-HCR冰糖鱼</li>
+            <li>33075m-车库-混世魔王</li>
+            <li>28609m-消防车-汉风派掌门</li>
+            <li>27116m-车库-congee6388</li>
+            <li>24381m-儿童快车-叁起</li>
+            <li>23008m-儿童快车-B站lai1345</li>
+            <li>19242m-高速赛车-Electree</li>
+            <li>17041m-迷你机车-叁起</li>
+            <li>16912m-卡车-叁起</li>
+            <li>15762m-消防车-叁起</li>
+            <li>14669m-观光巴士-叁起</li>
+            <li>13600m-警车-叁起</li>
+            <li>12685m-大手指-叁起</li>
+            <li>12681m-超级柴油四驱车-叁起</li>
+            <li>12575m-超级越野坦克-叁起</li>
+            <li>10735m-雪橇-叁起</li>
+            <li>9874m-手指丝杠车-叁起</li>
+            <li>9049m-快车-Electree</li>
+            <li>6697m-改装车-叁起</li>
+            <li>6028m-越野摩托车-叁起</li>
+            <li>6003m-怪物卡车-叁起</li>
+            <li>4738m-吉普-叁起</li>
+            <li>4720m-超级吉普-叁起</li>
+            <li>4037m-吉普-YOKA</li>
+            <li>502m-狼蛛车-叁起</li>
+        </ol>
+        <p id="shandong"><strong>山洞：</strong></p>
+        <ul class="text-secondary">
+            <li>143169m-拉力赛车-2023</li>
+        </ul>
+        <ol>
+            <li>12154m-拉力赛车-HCR冰糖鱼</li>
+            <li>5181m-拉力赛车-congee6388</li>
+            <li>5180m-拉力赛车-汉风派掌门</li>
+            <li>5180m-沙丘越野车-B站lai1345</li>
+            <li><a href="https://www.bilibili.com/video/BV1ju4y1i7z8/?spm_id_from=333.337.search-card.all.click&vd_source=839d46f484036b09e79f255591d33d8b">2370m-吉普-叁起</a></li>
+            <li>2357m-越野摩托车-叁起</li>
+            <li>1682m-吉普-YOKA</li>
+            <li>1161m-高速赛车-congee6388</li>
+            <li>1158m-高速赛车-Electree</li>
+            <li>1028m-汽车汽车-congee6388</li>
+            <li>147m-观光巴士-叁起</li>
+        </ol>
+        <p id="yueqiu"><strong>月球：</strong></p>
+        <ul class="text-secondary">
+            <li>138618m-登月车-2023</li>
+        </ul>
+        <ol>
+            <li>3725m-超级越野坦克-汉风派掌门</li>
+            <li>2349m-超级越野坦克-流枫</li>
+            <li>1993m-超级越野坦克-混世魔王</li>
+            <li>1901m-拉力赛车-congee6388</li>
+            <li>1527m-拉力赛车-混世魔王</li>
+            <li>1374m-改装车-叁起</li>
+            <li>882m-吉普-YOKA</li>
+        </ol>
+        <p id="xunlianying"><strong>训练营：</strong></p>
+        <ul class="text-secondary">
+            <li>50080m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>25547m-卡车-HCR冰糖鱼</li>
+            <li>23272m-大手指-夏夜冰晶梦</li>
+            <li>22664m-卡车-风和日夏</li>
+            <li>21554m-救护车-叁起</li>
+            <li>19414m-卡车-汉风派掌门</li>
+            <li>17970m-大手指-congee6388</li>
+            <li>14398m-消防车-B站lai1345</li>
+            <li>14357m-卡车-南方下雪我就释怀</li>
+            <li>7274m-怪物卡车-沧海如尘</li>
+            <li>3807m-吉普-YOKA</li>
+        </ol>
+        <p id="huoxing"><strong>火星：</strong></p>
+        <ul class="text-secondary">
+            <li>16755m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>13058m-车库-HCR冰糖鱼</li>
+            <li>8116m-车库-congee6388</li>
+            <li>2557m-沙丘越野车-汉风派掌门</li>
+            <li>1581m-高速赛车-Electree</li>
+            <li>1569m-吉普-YOKA</li>
+        </ol>
+        <p id="shengdan"><strong>圣诞：</strong></p>
+        <ul class="text-secondary">
+            <li>23066m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>9059m-车库-风和日夏</li>
+            <li>8279m-超级越野坦克-汉风派掌门</li>
+            <li>7280m-雪地摩托-叁起</li>
+            <li>6696m-卡车-叁起</li>
+            <li>6559m-车库-congee6388</li>
+            <li>6314m-卡车-congee6388</li>
+            <li>6057m-儿童快车-B站lai1345</li>
+            <li>4561m-沙丘越野车-叁起</li>
+            <li>3462m-越野摩托车-叁起</li>
+            <li>2148m-吉普-YOKA</li>
+        </ol>
+        <p id="waitaikongxingqiu"><strong>外太空星球：</strong></p>
+        <ul class="text-secondary">
+            <li>20399m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>7717m-车库-风和日夏</li>
+            <li>7351m-儿童快车-汉风派掌门</li>
+            <li>6110m-雪地摩托-风和日夏</li>
+            <li>5724m-儿童快车-congee6388</li>
+            <li>5215m-拉力赛车-congee6388</li>
+            <li>1402m-吉普-YOKA</li>
+        </ol>
+        <p id="beijidongxue"><strong>北极洞穴：</strong></p>
+        <ul class="text-secondary">
+            <li>2905m-超级越野坦克-2023</li>
+        </ul>
+        <ol>
+            <li>2452m-沙丘越野车-congee6388</li>
+            <li>2429m-超级越野坦克-汉风派掌门</li>
+            <li>2023m-气垫船-congee6388</li>
+            <li>1985m-沙丘越野车-B站lai1345</li>
+            <li>1059m-独轮车-混世魔王</li>
+            <li>1034m-吉普-YOKA</li>
+        </ol>
+        <p id="senlin"><strong>森林：</strong></p>
+        <ul class="text-secondary">
+            <li>199433m-登月车-2023</li>
+        </ul>
+        <ol>
+            <li>12006m-超级越野坦克-HCR冰糖鱼</li>
+            <li>8539m-超级越野战车-B站lai1345</li>
+            <li>8475m-登月车-B站lai1345</li>
+            <li>6667m-登月车-叁起</li>
+            <li>6383m-超级越野坦克-风和日夏</li>
+            <li>4849m-超级越野坦克-汉风派掌门</li>
+            <li>2280m-登月车-congee6388</li>
+            <li>1013m-吉普-YOKA</li>
+        </ol>
+        <p id="shan"><strong>山：</strong></p>
+        <ul class="text-secondary">
+            <li>84601m-登月车-2023</li>
+        </ul>
+        <ol>
+            <li>10879m-登月车-夏夜冰晶梦</li>
+            <li>9099m-登月车-汉风派掌门</li>
+            <li>8999m-登月车-B站lai1345</li>
+            <li>5101m-超级越野坦克-congee6388</li>
+        </ol>
+        <p id="xianjingchuanshuo"><strong>仙境传说：</strong></p>
+        <ol>
+            <li>80450m-登月车-B站lai1345</li>
+            <li>15964m-登月车-congee6388</li>
+            <li>15960m-登月车-汉风派掌门</li>
+        </ol>
+        <p id="nitan"><strong>泥潭：</strong></p>
+        <ul class="text-secondary">
+            <li>169389m-登月车-2023</li>
+        </ul>
+        <ol>
+            <li>14031m-超级越野坦克-汉风派掌门</li>
+            <li>4165m-登月车-congee6388</li>
+        </ol>
+        <p id="huoshan"><strong>火山：</strong></p>
+        <ul class="text-secondary">
+            <li>8486m-超级越野坦克-2023</li>
+        </ul>
+        <ol>
+            <li>6137m-超级越野坦克-汉风派掌门</li>
+            <li>6108m-超级越野坦克-死鱼</li>
+            <li>5694m-超级越野坦克-congee6388</li>
+            <li>5617m-超级越野坦克-B站lai1345</li>
+            <li>4776m-超级越野坦克-Electree</li>
+            <li>4160m-超级越野坦克-流枫</li>
+        </ol>
+        <p id="shatan"><strong>沙滩：</strong></p>
+        <ul class="text-secondary">
+            <li>41384m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>25002m-车库-HCR冰糖鱼</li>
+            <li>20975m-车库-风和日夏</li>
+            <li>17390m-消防车-congee6388</li>
+            <li>16500m-消防车-汉风派掌门</li>
+            <li>16426m-消防车-混世魔王</li>
+            <li>12947m-卡车-风和日夏</li>
+            <li>12894m-卡车-叁起</li>
+            <li>12147m-卡车-congee6388</li>
+            <li>12112m-卡车-南方下雪我就释怀</li>
+            <li>11142m-迷你车-风和日夏</li>
+        </ol>
+        <p id="gongchang"><strong>工厂：</strong></p>
+        <ul class="text-secondary">
+            <li>30294m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>17980m-警车-夏夜冰晶梦</li>
+            <li>12960m-救护车-叁起</li>
+            <li>12010m-警车-congee6388</li>
+            <li>7430m-吉普-叁起</li>
+        </ol>
+        <p id="guoshanche"><strong>过山车：</strong></p>
+        <ul class="text-secondary">
+            <li>10304m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>10303m-车库-HCR冰糖鱼</li>
+            <li>7312m-车库-congee6388</li>
+            <li>6663m-高速赛车-congee6388</li>
+            <li>5983m-高速赛车-汉风派掌门</li>
+            <li>4791m-高速赛车-B站lai1345</li>
+            <li>967m-卡车-南方下雪我就释怀</li>
+        </ol>
+        <p id="yewan"><strong>夜晚：</strong></p>
+        <ul class="text-secondary">
+            <li>27891m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>14165m-车库-风和日夏</li>
+            <li>10628m-车库-混世魔王</li>
+            <li>8767m-高速赛车-汉风派掌门</li>
+            <li>8707m-高速赛车-congee6388</li>
+            <li>7830m-超级越野坦克-死鱼</li>
+        </ol>
+        <p id="wuding"><strong>屋顶：</strong></p>
+        <ul class="text-secondary">
+            <li>15305m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>7703m-登月车-汉风派掌门</li>
+            <li>7018m-登月车-风和日夏</li>
+            <li>6675m-登月车-congee6388</li>
+            <li>6633m-救护车-叁起</li>
+            <li>6511m-超级越野坦克-叁起</li>
+            <li>5773m-拉力赛车-叁起</li>
+            <li>5773m-怪物卡车-叁起</li>
+            <li>4998m-越野摩托车-叁起</li>
+            <li>4893m-改装车-叁起</li>
+            <li>4492m-吉普-叁起</li>
+        </ol>
+        <p id="feichechang"><strong>废车场：</strong></p>
+        <ul class="text-secondary">
+            <li>21742m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>6317m-超级越野坦克-风和日夏</li>
+            <li>5290m-迷你车-风和日夏</li>
+            <li>5259m-超级越野坦克-汉风派掌门</li>
+            <li>4631m-超级越野坦克-B站lai1345</li>
+            <li>4551m-超级越野坦克-congee6388</li>
+        </ol>
+        <p id="jianzhu"><strong>建筑：</strong></p>
+        <ul class="text-secondary">
+            <li>13938m-登月车-2023</li>
+        </ul>
+        <ol>
+            <li>13237m-登月车-HCR冰糖鱼</li>
+            <li>7800m-登月车-风和日夏</li>
+            <li>6590m-登月车-汉风派掌门</li>
+            <li>4809m-登月车-congee6388</li>
+        </ol>
+        <p id="caihong"><strong>彩虹：</strong></p>
+        <ul class="text-secondary">
+            <li>27271m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>10056m-登月车-HCR冰糖鱼</li>
+            <li>8657m-登月车-汉风派掌门</li>
+            <li>8657m-登月车-死鱼</li>
+            <li>8600m-登月车-风和日夏</li>
+            <li>7546m-登月车-congee6388</li>
+        </ol>
+        <p id="guishenchumo"><strong>鬼神出没：</strong></p>
+        <ul class="text-secondary">
+            <li>29559m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>11738m-车库-风和日夏</li>
+            <li>7801m-超级越野坦克-汉风派掌门</li>
+            <li>7686m-雪地摩托-风和日夏</li>
+            <li>6485m-超级越野坦克-B站lai1345</li>
+            <li>4859m-拉力赛车-congee6388</li>
+        </ol>
+        <p id="beiji2"><strong>（新）北极：</strong></p>
+        <ul class="text-secondary">
+            <li>84750m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>32748m-卡车-死鱼</li>
+            <li>25354m-卡车-汉风派掌门</li>
+            <li>17084m-大手指-congee6388</li>
+            <li>8879m-越野摩托车-叁起</li>
+            <li>8874m-怪物卡车-叁起</li>
+            <li>2051m-狼蛛车-叁起</li>
+        </ol>
+        <p id="hedianzhan"><strong>核电站：</strong></p>
+        <ul class="text-secondary">
+            <li>26394m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>24675m-登月车-夏夜冰晶梦</li>
+            <li>24630m-登月车-B站lai1345</li>
+            <li><strong>23033m-登月车-congee6388【擂主】</strong></li>
+            <li>17310m-超级越野坦克-风和日夏</li>
+        </ol>
+        <p id="jingjichang"><strong>竞技场：</strong></p>
+        <ul class="text-secondary">
+            <li>36898m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>14455m-大手指-HCR冰糖鱼</li>
+            <li>5445m-超级越野坦克-风和日夏</li>
+            <li>5443m-大手指-congee6388</li>
+            <li>4752m-高速赛车-Electree</li>
+            <li>4128m-登月车-congee6388</li>
+        </ol>
+        <p id="conglin"><strong>丛林：</strong></p>
+        <ul class="text-secondary">
+            <li>44574m-大手指-2023</li>
+        </ul>
+        <ol>
+            <li>32279m-大手指-夏夜冰晶梦</li>
+            <li>19865m-超级越野坦克-夏夜冰晶梦</li>
+            <li>19787m-登月车-夏夜冰晶梦</li>
+            <li>11598m-怪物卡车-夏夜冰晶梦</li>
+            <li>8336m-嬉皮货车-夏夜冰晶梦</li>
+            <li>7549m-大手指-congee6388</li>
+            <li>6005m-沙漠卡车-congee6388</li>
+        </ol>
+        <p id="nihong"><strong>霓虹：</strong></p>
+        <ul class="text-secondary">
+            <li>27127m-登月车-2023</li>
+        </ul>
+        <ol>
+            <li>9041m-登月车-夏夜冰晶梦</li>
+            <li>4023m-空气汽车-congee6388</li>
+        </ol>
+        <p id="yuzhi"><strong>预知：</strong></p>
+        <ul class="text-secondary">
+            <li>22256m-大手指-2023</li>
+        </ul>
+        <ol>
+            <li>14285m-登月车-夏夜冰晶梦</li>
+            <li>13430m-大手指-夏夜冰晶梦</li>
+            <li>8417m-大手指-congee6388</li>
+        </ol>
+        <p id="zhaozedi"><strong>沼泽地：</strong></p>
+        <ul class="text-secondary">
+            <li>6067m-超级越野坦克-2023</li>
+        </ul>
+        <ol>
+            <li>4821m-超级越野坦克-夏夜冰晶梦</li>
+            <li>4411m-大手指-congee6388</li>
+            <li>3090m-高速赛车-Electree</li>
+        </ol>
+        <p id="jiaoqu"><strong>郊区（不计载具）：</strong></p>
+        <ol>
+            <li>已通关：
+                <ul>
+                    <li>4200m-*-夏夜冰晶梦</li>
+                    <li>4200m-*-混世魔王</li>
+                </ul>
+            </li>
+            <li>1925m-*-混世魔王</li>
+            <li>1727m-*-congee6388</li>
+        </ol>
+        <p id="xingdongyingxiong"><strong>行动英雄：</strong></p>
+        <ul class="text-secondary">
+            <li>13367m-车库-2023</li>
+        </ul>
+        <ol>
+            <li>4604m-超级越野坦克-夏夜冰晶梦</li>
+            <li>3807m-登月车-夏夜冰晶梦</li>
+            <li>3338m-超级越野坦克-叁起</li>
+            <li>3207m-超级越野坦克-流枫</li>
+            <li>2884m-大手指-congee6388</li>
+            <li>2700m-高速赛车-Electree</li>
+        </ol>
+        <p id="chaojixiangcun"><strong>超级乡村：</strong></p>
+        <ul class="text-secondary">
+            <li>10182m-登月车-2023</li>
+        </ul>
+        <ol>
+            <li>6420m-登月车-夏夜冰晶梦</li>
+            <li>5668m-超级越野坦克-流枫</li>
+            <li>4871m-登月车-congee6388</li>
+            <li>4843m-超级越野坦克-Electree</li>
+        </ol>
+        <p id="huaijiurenwu"><strong>怀旧任务（计时）：</strong></p>
+        <ul class="text-secondary">
+            <li>03'17''86-*-2023（被超越）</li>
+        </ul>
+        <ol>
+            <li class="text-danger"><strong>03'14''94-*-风和日夏【擂主】</strong></li>
+            <li>03'36''35-*-混世魔王</li>
+            <li>03'36''67-*-congee6388</li>
+        </ol>
+        <p id="dagaosu"><strong>大高速公路：</strong></p>
+        <ol>
+            <li>43271m-车库-HCR冰糖鱼</li>
+            <li>27145m-车库-蒲公英</li>
+            <li>23031m-儿童快车-B站lai1345</li>
+            <li>14757m-高速赛车-Electree</li>
+            <li>1571m-拉力赛车-congee6388</li>
+        </ol>
+        <p id="dashamo"><strong>大沙漠：</strong></p>
+        <ol>
+            <li>75764m-超级越野坦克-风和日夏</li>
+            <li>38614m-超级越野坦克-B站lai1345</li>
+            <li>10742m-超级越野坦克-Electree</li>
+            <li>1608m-变形-congee6388</li>
+        </ol>
+        <p id="taikongrenwu"><strong>太空任务（计时）：</strong></p>
+        <ol>
+            <li>00:00:59-*-夏夜冰晶梦</li>
+            <li>00:01:31-*-congee6388</li>
+        </ol>
+        <hr />
+        <div class="card">
+            <div id="leizhu" class="card-header text-center"><strong>【擂主空间】</strong></div>
+            <div class="card-body">
+                <p><strong>congee6388——核电站</strong></p>
+                <p>B站个人主页地址：<a href="https://space.bilibili.com/442527334/">石子大王</a></p>
+                <ol>
+                    <li>23033m-登月车</li>
+                    <li>21335m-超级越野坦克</li>
+                    <li>20409m-快车</li>
+                    <li>19663m-车库</li>
+                    <li>16400m-变形</li>
+                    <li>14778m-拉力赛车</li>
+                    <li>12162m-高速赛车</li>
+                    <li>11996m-雪地摩托</li>
+                    <li>11625m-沙丘越野车</li>
+                </ol>
+            </div>
+            <hr />
+            <div class="card-body">
+                <p><strong>风和日夏——怀旧任务（计时）</strong></p>
+                <p>B站个人主页地址：<a href="https://space.bilibili.com/1831306209/">怎么办受不了冷空调</a></p>
+                <ol class="text-danger">
+                    <li>03'14''94</li>
+                    <li>03'15''06</li>
+                    <li>03'15''70</li>
+                    <li>03'16''16</li>
+                    <li>03'16''40</li>
+                    <li>03'16''81</li>
+                    <li>03'16''84</li>
+                </ol>
+            </div>
+        </div>
+        <hr />
+        <p><strong>关卡里程数提交系统：</strong></p>
+        <ul>
+            <li>可直接添加页面上方记录讨论群提交你的记录至站点</li>
+            <li class="text-secondary">【暂停使用】想上榜的小伙伴可以进链接填表哦：<a href="https://docs.qq.com/form/page/DQWJiWlNGenZsWnpK#/fill">关卡里程数提交系统</a></li>
+        </ul>
+        <hr />
+        <div class="small text-end">站点有BUG？<a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=mODRWFqRi0lOKor_fEaldKjHdw9ADP90&authKey=3w0jE%2FfQUPoiprOupKKiVpAgpUhT9MtmB2dUWPe3%2FWSOfgHzSoJa6uqTsTwvNkED&noverify=0&group_code=895097776">点击链接进行反馈</a></div>
+        <hr />
+    </div>
+    </body>
+</html>
